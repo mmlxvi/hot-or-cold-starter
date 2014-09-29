@@ -3,7 +3,7 @@ $(document).ready(function(){
 	/*--- Generate random number chosen by computer ---*/
 	var num = (Math.random() * 100);
 	var computerChoice = num.toFixed(0);
-	var userChoice;
+	
 	console.log(computerChoice);
 
 	/*--- User can start new game without reloading page ---*/
@@ -18,10 +18,10 @@ $(document).ready(function(){
 
     	if(e.keyCode == 13) {
 		
-    		userChoice = document.getElementById("userGuess").value;
-    
+    		var userChoice = document.getElementById("userGuess").value;
+    		console.log(userChoice);
 		}
-            console.log(userChoice);
+            
 
         });
         
