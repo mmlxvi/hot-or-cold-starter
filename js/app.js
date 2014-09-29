@@ -14,15 +14,9 @@ $(document).ready(function(){
 		});
     
 
-    $("#userGuess").keydown(function(e){
-
-    	if(e.keyCode == 13) {
-		
-    		var userChoice = document.getElementById("userGuess").value;
-    		console.log(userChoice);
-		}
-            
-
+    $("#guessButton").click(function(){
+    	alert('button works');
+    	
         });
         
 
