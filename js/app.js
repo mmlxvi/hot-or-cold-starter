@@ -17,8 +17,11 @@ $(document).ready(function(){
     $("#guessButton").click(function(){
     	userChoice = document.getElementById("userGuess").value;
     	var difference = (Math.abs(computerChoice - userChoice));
-    	
-    	if (isNaN(userChoice)) {
+    	$('#guessButton').val('');
+
+    	while (userChoice !== computerChoice) {
+
+    	    	if (isNaN(userChoice)) {
     		alert("\"" + userChoice + "\"" + " is not a number. Please enter a number between 1 and 100.");
     	}
 
@@ -26,10 +29,6 @@ $(document).ready(function(){
     		alert("Enter a number between 1 and 100.");
     	}
     	
-    	else if (userChoice === computerChoice) {
-    		alert("You guessed it!");
-    	}
-
     	else if (difference <= 3) {
     		alert("Smoking hot!");
     	}
@@ -62,8 +61,9 @@ $(document).ready(function(){
     		alert("You're on Antarctica.");
     	};
 
-        });
-    
+        };
+    	
+    	});
  
 
     $(".new").click(function() {
