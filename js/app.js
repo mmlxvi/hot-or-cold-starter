@@ -13,15 +13,16 @@ $(document).ready(function(){
 
 	/*--- User can start new game without reloading page ---*/
 	
-for (counter = 0; counter < 100; counter++) {
 
-    $("#guessButton").click(function(){
+    $("form").submit(function(event){
+
+    	event.preventDefault();
+
     	userChoice = document.getElementById("userGuess").value;
     	difference = (Math.abs(computerChoice - userChoice));
-    	$('#guessButton').val('');
+    	$('#userGuess').val('');
+    	$("#guessList").append(userChoice + ", ");
 
-    	$("#guessList").append(userChoice + ",");
-    	
     	
     	if (isNaN(userChoice)) {
     		alert("\"" + userChoice + "\"" + " is not a number. Please enter a number between 1 and 100.");
@@ -32,72 +33,67 @@ for (counter = 0; counter < 100; counter++) {
     	}
 
     	else if (userChoice === computerChoice) {
-    		alert("You guessed it!");
+    		$("#feedback").text("That's correct!");
     	}
     	
     	else {
 
     			if (difference > 0 && difference <= 3) {
-    			$("#feedback").text("You're very hot!");
+    			$("#feedback").text("You're on fire!");
     			}
 
 	    		else if (difference > 3 && difference <= 6) {
 	    		
 	    		$("#feedback").text("Hot!");
-	    		alert("Hot!");
+	    		//alert("Hot!");
 	    		
 	    		}
 
-	    		else if (difference > 6 && difference <= 12) {
-	    		
-	    		$("#feedback").text("More than warm...");
-	    		alert("More than warm...");
-	    		
-	    		}
-
-	    		else if (difference > 12 && difference <= 20) {
+	    		else if (difference > 6 && difference <= 10) {
 	    		
 	    		$("#feedback").text("Warm.");
-	    		alert("Warm.");
+	    		//alert("Warm.");
 	    		}
 
-	    		else if (difference > 20 && difference <= 30) {
+	    		else if (difference > 10 && difference <= 18) {
 	    		
 	    		$("#feedback").text("Kinda warm...");
-	    		alert("Kinda warm...");
+	    		//alert("Kinda warm...");
 	    		}
 
-	    		else if (difference > 30 && difference <= 50) {
+	    		else if (difference > 18 && difference <= 40) {
 	    		
 	    		$("#feedback").text("Cold.");
-	    		alert("Cold.");
+	    		//alert("Cold.");
 	    		}
 
-	    		else if (difference > 50 && difference <= 75) {
+	    		else if (difference > 40 && difference <= 75) {
 	    		
 	    		$("#feedback").text("Very cold.");
-	    		alert("Very cold.");
+	    		//alert("Very cold.");
 	    		}
 
 	    		else {
 	    		
-	    		$("#feedback").text("Frickin' freezing.");
-	    		alert("Freezing.");
+	    		$("#feedback").text("Freezing.");
+	    		//alert("Freezing.");
 	    		}
     		
     		}
     	
     	
     });
+	
+	
 
-}
  
-/*
+
     $(".new").click(function() {
 		num = (Math.random() * 100);
 		computerChoice = num.toFixed(0);
 		console.log(computerChoice);
-		}); */
+
+		});
 
 	/*--- Display information modal box ---*/
   	//$(".what").click(function(){
