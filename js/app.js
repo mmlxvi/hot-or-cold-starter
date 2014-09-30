@@ -92,19 +92,19 @@ $(document).ready(function(){
 		num = (Math.random() * 100);
 		computerChoice = num.toFixed(0);
 		console.log(computerChoice);
-
+		$("#guessList").val('');
 		});
 
 	/*--- Display information modal box ---*/
-  	//$(".what").click(function(){
-    //	$(".overlay").fadeIn(700);
+  	$(".what").click(function(){
+    	$(".overlay").fadeIn(700);
 
-  	//});
+  	});
 
   	/*--- Hide information modal box ---*/
-  	//$("a.close").click(function(){
-  	//	$(".overlay").fadeOut(700);
-  	//});
+  	$("a.close").click(function(){
+  		$(".overlay").fadeOut(700);
+  	});
 
   	
 
