@@ -8,6 +8,7 @@ $(document).ready(function(){
 	/*--- Generate random number chosen by computer ---*/
 	var num = (Math.random() * 100);
 	var computerChoice = num.toFixed(0);
+	var keepRunning = true;
 	
 	console.log(computerChoice);
 
@@ -34,6 +35,7 @@ $(document).ready(function(){
 
     	else if (userChoice === computerChoice) {
     		$("#feedback").text("That's correct!");
+    		keepRunning === false;
     	}
     	
     	else {
