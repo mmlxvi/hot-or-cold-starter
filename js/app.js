@@ -8,7 +8,7 @@ $(document).ready(function(){
 	/*--- Generate random number chosen by computer ---*/
 	var num = (Math.random() * 100);
 	var computerChoice = num.toFixed(0);
-	var keepRunning = true;
+	
 	
 	console.log(computerChoice);
 
@@ -35,16 +35,16 @@ $(document).ready(function(){
 
     	else if (userChoice === computerChoice) {
     		$("#feedback").text("That's correct!");
-    		keepRunning === false;
+    		
     	}
     	
     	else {
 
-    			if (difference > 0 && difference <= 3) {
-    			$("#feedback").text("You're on fire!");
+    			if (difference > 0 && difference <= 1) {
+    			$("#feedback").text("You're right next to it!");
     			}
 
-	    		else if (difference > 3 && difference <= 6) {
+	    		else if (difference > 1 && difference <= 6) {
 	    		
 	    		$("#feedback").text("Hot!");
 	    		//alert("Hot!");
