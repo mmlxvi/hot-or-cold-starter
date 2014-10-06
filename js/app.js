@@ -94,7 +94,7 @@ $(document).ready(function(){
 		num = (Math.random() * 100);
 		computerChoice = num.toFixed(0);
 		console.log(computerChoice);
-		$("#guessList").val('');
+		$("#guessList").remove();
 		});
 
 	/*--- Display information modal box ---*/
