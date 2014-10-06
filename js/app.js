@@ -23,7 +23,9 @@ $(document).ready(function(){
     	difference = (Math.abs(computerChoice - userChoice));
     	$('#userGuess').val('');
     	$("#guessList").append(userChoice + ", ");
-
+    	counter = counter+1;
+    	$('#guessCount').show();
+    	$('#count').text(counter);
     	
     	if (isNaN(userChoice)) {
     		alert("\"" + userChoice + "\"" + " is not a number. Please enter a number between 1 and 100.");
@@ -90,11 +92,15 @@ $(document).ready(function(){
 
  
 
-    $(".new").click(function() {
+      $(".new").click(function() {
 		num = (Math.random() * 100);
 		computerChoice = num.toFixed(0);
 		console.log(computerChoice);
-		$("#guessList").remove();
+		counter = 0;
+		$("#userChoice").val("");
+		$("#guessList").text("");
+		$('#guessCount').show();
+		$('#count').text(counter);
 		});
 
 	/*--- Display information modal box ---*/
