@@ -24,8 +24,8 @@
 			<!-- Top Navigation -->
 			<nav> 
 				<ul class="clearfix">
-					<li><a class="what" href="#">How To Play</a></li>
-					<li><a class="new" href="#">+ New Game</a></li>
+					<!-- <li><a class="what" href="#">How To Play</a></li>
+					<li><a class="new" href="#">+ New Game</a></li> -->
 				</ul>
 			</nav>
 			
@@ -50,22 +50,27 @@
 			<h1 id="titleImage"><img src="images/hotorcold3.png"></h1>
 
 		</header>
-
+        
+        <!-- <div class="sides" id="addLeft"></div> -->
+        <div class="newby" id="instruct"><p>The computer is thinking of a number between 1 and 100.</p><p>See if you can guess the number.</p></div>
 		<section class="game"> <!-- Guessing Section -->
 			
-			<h2 id="feedback">Enter your guess.</h2>
+			<h2 id="feedback">Type a number and press enter.</h2>
 
 			<form>
-				<input type="text" name="userGuess" id="userGuess" class="text" maxlength="3" autocomplete="off" placeholder="enter your guess" required/>
-      			<input type="submit" id="guessButton" class="button" name="submit" value="Guess"/>
+				<input type="text" name="userGuess" id="userGuess" class="text" maxlength="3" autocomplete="off" placeholder="" required/>
+      			<!-- <input type="submit" id="guessButton" class="button" name="submit" value="Press to Guess"/> -->
 			</form>
 			
       		<p id="guessCount">Guess #<span id="count">0</span></p>
-			
+			<p id="previousGuess">Previous Guesses:</p>
 			<ul id="guessList" class="guessBox clearfix">
 
 			</ul>
 
 		</section>
+        <div class="newby"><a class="new" href="#">+ New Game</a></div>
+        <!-- <div class="sides" id="addRight"></div> -->
+        
 	</body>
 </html>

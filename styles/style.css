@@ -13,6 +13,7 @@
 }
 
 * {
+    /*outline:1px black solid; */
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -27,8 +28,8 @@ html {
 body {
 	position: relative;
 	width: 1000px;
-	height: 96%;
-	margin: 0.8em auto;
+	height: 800px;
+	margin: 3em auto;
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	
     background: rgba(255,255,255, 0.7);
@@ -84,9 +85,9 @@ nav a {
 h1 {
 	font-weight: 900;
 	font-size: 3em;
-	padding: 0.8em;
+	
 	color: #fff;
-    margin-top:-91px;
+    margin-top:-33px;
 }
 
 /*style for hidden modal*/
@@ -174,10 +175,11 @@ h1 {
 	position: relative;
 	background-color: white;
 	width: 380px;
-	height: 380px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+	height: 360px;
+    border:2px solid black;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 	margin: 0 auto;
 
 }
@@ -190,8 +192,7 @@ h2 {
 	font-weight: 400;
 	display: block;
 	line-height: 1em;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
+	
 	color: #ECF0F1;
 }
 
@@ -202,14 +203,14 @@ h2 {
 }
 
 #count {
-	color: #ECF0F1;
+	color: black;
 	font-weight: 700;
 	font-size: 1.2em;
 }
 
 input {
-	width: 300px;
-	height: 50px;
+	width: 100px;
+	height: 40px;
 	display: block;
 	padding: 0.8em 0;
 	margin: 0.8em auto 0;
@@ -261,14 +262,13 @@ input:focus {
 }
 
 ul.guessBox {
-	height: 80px;
+	height: 88px;
 	margin: 10px auto 0;
 	background: black;
 	padding: 0.5em;
 	display: block;
 	line-height: 2em;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
+	
 	color: #fff;
 	overflow: auto;
 }
@@ -276,9 +276,7 @@ ul.guessBox li {
 	display: inline;
 	background-color: #1a4e95;
 	padding: 0.1em;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+	
 	width: 95%;
 	margin: 0.2em;
 	color: #fff;
@@ -286,10 +284,36 @@ ul.guessBox li {
 }
 
 #guessList {
-	font-size:1.5em;
+	font-size:1em;
 }
 
 #titleImage img {
     width:800px;
 }
+
+.sides {
+    height:100px;
+    width:100px;
+    border:1px solid pink;
+}
+
+.newby {
+    text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.2em;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.instruct {
+    margin-top:-40px;
     
+}
+
+p {
+    margin-top:10px;
+}
+
+#previousGuess {
+    margin-bottom:0px;
+}

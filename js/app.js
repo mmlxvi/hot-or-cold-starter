@@ -1,12 +1,12 @@
 $(document).ready(function(){
 	
-	
+	$( "#userGuess" ).focus();
 	var userChoice;
 	var computerChoice;
 	var difference;
 	var counter=0;
 	/*--- Generate random number chosen by computer ---*/
-	var num = (Math.random() * 100);
+	var num = Math.ceil((Math.random() * 100));
 	var computerChoice = num.toFixed(0);
 	
 	
@@ -37,50 +37,58 @@ $(document).ready(function(){
 
     	else if (userChoice === computerChoice) {
     		$("#feedback").text("That's correct!");
+            $("html").css("background-color","black");
     		
     	}
     	
     	else {
 
     			if (difference > 0 && difference <= 1) {
-    			$("#feedback").text("You're right next to it!");
+    			$("#feedback").text("Very hot! Guess again.");
+                $("html").css("background-color","#fe0001");
     			}
 
 	    		else if (difference > 1 && difference <= 6) {
 	    		
-	    		$("#feedback").text("Hot!");
+	    		$("#feedback").text("Hot! Guess again.");
 	    		//alert("Hot!");
+                $("html").css("background-color","#ff00ff");
 	    		
 	    		}
 
 	    		else if (difference > 6 && difference <= 10) {
 	    		
-	    		$("#feedback").text("Warm.");
+	    		$("#feedback").text("Very warm. Guess again.");
 	    		//alert("Warm.");
+                $("html").css("background-color","#ff6600");
 	    		}
 
 	    		else if (difference > 10 && difference <= 18) {
 	    		
-	    		$("#feedback").text("Kinda warm...");
+	    		$("#feedback").text("Warm. Guess again.");
 	    		//alert("Kinda warm...");
+                $("html").css("background-color","#cfff04");
 	    		}
 
-	    		else if (difference > 18 && difference <= 40) {
+	    		else if (difference > 18 && difference <= 35) {
 	    		
-	    		$("#feedback").text("Cold.");
+	    		$("#feedback").text("Lukewarm. Guess again.");
 	    		//alert("Cold.");
+                $("html").css("background-color","#6fff00");
 	    		}
 
-	    		else if (difference > 40 && difference <= 75) {
+	    		else if (difference > 35 && difference <= 50) {
 	    		
-	    		$("#feedback").text("Very cold.");
+	    		$("#feedback").text("Cold. Guess again.");
 	    		//alert("Very cold.");
+                $("html").css("background-color","#00ffff");
 	    		}
 
 	    		else {
 	    		
-	    		$("#feedback").text("Freezing.");
+	    		$("#feedback").text("Very cold. Guess again.");
 	    		//alert("Freezing.");
+                $("html").css("background-color","#993cf3");
 	    		}
     		
     		}
