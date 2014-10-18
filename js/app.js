@@ -48,7 +48,7 @@ $(document).ready(function(){
                 $("html").css("background-color","#fe0001");
     			}
 
-	    		else if (difference > 1 && difference <= 6) {
+	    		else if (difference > 1 && difference <= 3) {
 	    		
 	    		$("#feedback").text("Hot! Guess again.");
 	    		//alert("Hot!");
@@ -56,28 +56,28 @@ $(document).ready(function(){
 	    		
 	    		}
 
-	    		else if (difference > 6 && difference <= 10) {
+	    		else if (difference > 3 && difference <= 6) {
 	    		
 	    		$("#feedback").text("Very warm. Guess again.");
 	    		//alert("Warm.");
                 $("html").css("background-color","#ff6600");
 	    		}
 
-	    		else if (difference > 10 && difference <= 18) {
+	    		else if (difference > 6 && difference <= 10) {
 	    		
 	    		$("#feedback").text("Warm. Guess again.");
 	    		//alert("Kinda warm...");
                 $("html").css("background-color","#cfff04");
 	    		}
 
-	    		else if (difference > 18 && difference <= 35) {
+	    		else if (difference > 10 && difference <= 15) {
 	    		
 	    		$("#feedback").text("Lukewarm. Guess again.");
 	    		//alert("Cold.");
                 $("html").css("background-color","#6fff00");
 	    		}
 
-	    		else if (difference > 35 && difference <= 50) {
+	    		else if (difference > 15 && difference <= 25) {
 	    		
 	    		$("#feedback").text("Cold. Guess again.");
 	    		//alert("Very cold.");
