@@ -37,7 +37,9 @@ $(document).ready(function(){
 
     	else if (userChoice === computerChoice) {
     		$("#feedback").text("That's correct!");
-            $("html").css("background-color","black");
+            $("#feedback").css("color","white");
+            $("#feedback").css("background-color","black");
+            
     		
     	}
     	
@@ -45,50 +47,56 @@ $(document).ready(function(){
 
     			if (difference > 0 && difference <= 1) {
     			$("#feedback").text("Very hot! Guess again.");
-                $("html").css("background-color","#fe0001");
+                $("#feedback").css("background-color","#fe0001");
+                $("#feedback").css("color","black");
     			}
 
 	    		else if (difference > 1 && difference <= 3) {
 	    		
 	    		$("#feedback").text("Hot! Guess again.");
 	    		//alert("Hot!");
-                $("html").css("background-color","#ff00ff");
-	    		
+                $("#feedback").css("background-color","#ff00ff");
+	    		$("#feedback").css("color","black");
 	    		}
 
 	    		else if (difference > 3 && difference <= 5) {
 	    		
 	    		$("#feedback").text("Very warm. Guess again.");
 	    		//alert("Warm.");
-                $("html").css("background-color","#ff6600");
+                $("#feedback").css("background-color","#ff6600");
+                $("#feedback").css("color","black");
 	    		}
 
 	    		else if (difference > 5 && difference <= 9) {
 	    		
 	    		$("#feedback").text("Warm. Guess again.");
 	    		//alert("Kinda warm...");
-                $("html").css("background-color","#cfff04");
+                $("#feedback").css("background-color","#cfff04");
+                $("#feedback").css("color","black");
 	    		}
 
 	    		else if (difference > 9 && difference <= 13) {
 	    		
 	    		$("#feedback").text("Lukewarm. Guess again.");
 	    		//alert("Cold.");
-                $("html").css("background-color","#6fff00");
+                $("#feedback").css("background-color","#6fff00");
+                $("#feedback").css("color","black");
 	    		}
 
 	    		else if (difference > 13 && difference <= 20) {
 	    		
 	    		$("#feedback").text("Cold. Guess again.");
 	    		//alert("Very cold.");
-                $("html").css("background-color","#00ffff");
+                $("#feedback").css("background-color","#00ffff");
+                $("#feedback").css("color","black");
 	    		}
 
 	    		else {
 	    		
 	    		$("#feedback").text("Very cold. Guess again.");
 	    		//alert("Freezing.");
-                $("html").css("background-color","#993cf3");
+                $("#feedback").css("background-color","#993cf3");
+                $("#feedback").css("color","black");
 	    		}
     		
     		}
