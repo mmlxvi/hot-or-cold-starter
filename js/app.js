@@ -109,6 +109,7 @@ $(document).ready(function(){
 		$("#guessList").text("");
 		$('#guessCount').show();
 		$('#count').text(counter);
+          $("html").css("background-color","#f3f3f3");
 		});
 
 	/*--- Display information modal box ---*/
