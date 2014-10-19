@@ -77,7 +77,7 @@ $(document).ready(function(){
                 $("html").css("background-color","#6fff00");
 	    		}
 
-	    		else if (difference > 13 && difference <= 25) {
+	    		else if (difference > 13 && difference <= 20) {
 	    		
 	    		$("#feedback").text("Cold. Guess again.");
 	    		//alert("Very cold.");
